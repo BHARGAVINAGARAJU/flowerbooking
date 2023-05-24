@@ -1,0 +1,29 @@
+
+<body>
+  <h2 align="center">Payment</h2>
+<form #clientform="ngForm" (ngSubmit)="submitForm(clientform)" >
+  <div>
+    <label for="cardNumber">Card Number:</label>
+    <input type="text" [(ngModel)]="Payment.cardNumber" id="cardNumber" name="cardNumber" placeholder="Enter card number">
+  </div>
+
+  <div>
+    <label for="expiryDate">Expiry Date:</label>
+    <input type="text"  [(ngModel)]="Payment.expiryDate" id="expiryDate" name="expiryDate" placeholder="MM/YY">
+  </div>
+
+  <div>
+    <label for="cvv">CVV:</label>
+    <input type="text"  [(ngModel)]="Payment.cvv" id="cvv" name="cvv" placeholder="Enter CVV">
+  </div>
+
+  <div>
+    <label for="name">Cardholder Name:</label>
+    <input type="text"  [(ngModel)]="Payment.name" id="name" name="name" placeholder="Enter cardholder name">
+  </div>
+
+  <div>
+    <button type="submit">Pay Now</button>
+  </div>
+</form>
+</body>

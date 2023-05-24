@@ -1,0 +1,27 @@
+<head>
+  <script>
+    function redirectToPayment() {
+      // Redirect the user to the payment page
+      window.location.href = "payment.component.html";
+    }
+  </script>
+</head>
+<body>
+
+<h2 align="center">Cart</h2>
+<div align="center">
+  <h3>Product Details:</h3>
+  <p> {{ pname }}</p>
+  <p>{{ price }}</p>
+  <p><strong>Image:</strong></p>
+  <img [src]="image" alt="Product Image" width="200" height="200">
+
+
+  <br>
+  <div>
+    <div class="buttons-container"><button class="btn btn-primary " (click)="redirectToPayment()">Continue to Pay</button></div>
+  </div>
+  </div>
+  </body>
+
+

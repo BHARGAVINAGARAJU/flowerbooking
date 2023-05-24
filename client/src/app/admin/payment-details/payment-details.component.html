@@ -1,0 +1,33 @@
+
+  
+  <app-header></app-header>
+  <div class="d-flex">
+    
+      <app-sidebar></app-sidebar>
+    
+  <ul class="list-group p-4" style="width: 800px;" *ngIf="!isLoading">
+      <h1 style="color: rgb(98, 90, 252); font-size: 38px; font-weight: bold;" class="mb-4">Payments</h1>
+      <li class="list-group-item" *ngFor="let payment of payments">
+        <div class="col card p-4">
+          <div>
+              <strong>Payment id:</strong> {{ payment._id }}
+            </div>
+          <div>
+            <strong>Card Number:</strong> {{ payment.cardNumber }}
+          </div>
+          <div>
+            <strong>Expiry Date:</strong> {{ payment.expiryDate }}
+          </div>
+          
+          <div>
+            <strong>CVV:</strong> {{ payment.cvv }}
+          </div>
+          <div>
+            <strong>Card holder Name</strong> {{ payment.name }}
+          </div>
+        </div>
+      </li>
+    </ul>
+
+  </div>
+

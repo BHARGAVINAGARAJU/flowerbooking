@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html>
+<head>
+<script>
+let menu = document.querySelector('#menu-bar');
+let navbar = document.querySelector('.navbar');
+
+
+menu.onclick = () => {
+
+menu.classList.toggle('fa-times');
+navbar.classList.toggle('active');
+
+}
+
+window.onscroll = () => {
+    menu.classList.remove('fa-times');
+    navbar.classList.remove('active');
+
+
+if(window.scrollY > 60){
+    document.querySelector('#scroll-top').classList.add('active');
+  }else{
+    document.querySelector('#scroll-top').classList.remove('active');
+  }
+
+}
+
+function loader(){
+  document.querySelector('.loader-container').classList.add('fade-out');
+}
+
+function fadeOut(){
+  setInterval(loader, 2000);
+}
+
+window.onload = fadeOut();
+
+var header = document.querySelector("h3") //grabbing
+header
+//then you can interface with the object .
+header.style.color = `red`
+
+function getRandomColor(){
+    var letters="0123456789ABCDEF";
+    var color = "#";
+    for(var i=0;i < 6;i++){
+       color += letters[Math.floor(Math.random()*16)];
+    }
+    return color
+}
+
+function changeHeaderColor(){
+    colorInput = getRandomColor()// we are assigning a function to a variable 
+    header.style.color = colorInput;
+}
+setInterval("changeHeaderColor()",300);
+</script>
+</head>
+<body>
+  <!--  <header>
+        <a href="#" class="logo"><i class="fas fa-star"></i><b></b></a>
+        <div id="menu-bar" class="fas fa-bars"></div>
+  <nav class="navbar">-->
+    <a href="#home"></a>
+   <!--a href="#product">Products</a>
+    <a href="#">Cart</a>
+    <a href="#">My orders</a>
+    <a href="#">Profile</a>
+  </nav>
+</header>-->
+
+  <section class="home" id="home">
+    <div class="content">
+        <h3>Live simply bloom wildly</h3>
+        <p>Here are the latest flower models for you.Grab yours now to gift for your near and dear</p>
+        <a href="/login" class="btn">Order yours</a>
+    </div>
+
+    <div class="image" >
+        <img src="./assets/images/img1.jpg" >
+    </div>
+</section>
+
+<!--products
+<section class="product" id="product">
+    <h1 class="heading">Our<span>Products</span></h1>
+    <div class="box-container">
+        <div class="box">
+            <img src="./assets/images/img2.jpg" alt="">
+            <span class="price">Rs.150-Rs.250</span>
+            <h3>Tulips</h3>
+            <div class="stars">
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="far fa-star"></i>
+            </div>
+            <a href="#" class="btn" >Add to cart</a>
+        </div>
+
+                <div class="box">
+                    <img src="./assets/images/img3.jpg" alt="">
+                    <span class="price">Rs.100-Rs.300</span>
+                    <h3>Sun flowers</h3>
+                    <div class="stars">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="far fa-star"></i>
+                    </div>
+                    <a href="#" class="btn" >Add to cart</a>
+                </div>
+
+                <div class="box">
+                    <img src="./assets/images/img4.jpg" alt="">
+                    <span class="price">Rs.200-Rs.400</span>
+                    <h3>Orchid</h3>
+                    <div class="stars">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="far fa-star"></i>
+                    </div>
+                    <a href="#" class="btn" >Add to cart</a>
+                </div>
+
+                <div class="box">
+                    <img src="./assets/images/img5.jpg" alt="">
+                    <span class="price">Rs.250-Rs.350</span>
+                    <h3>Butter cup</h3>
+                    <div class="stars">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="far fa-star"></i>
+                    </div>
+                    <a href="#" class="btn" >Add to cart</a>
+                </div>
+
+                <div class="box">
+                    <img src="./assets/images/img6.jpg" alt="">
+                    <span class="price">Rs.350-Rs.500</span>
+                    <h3>Hydrangea</h3>
+                    <div class="stars">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="far fa-star"></i>
+                    </div>
+                    <a href="#" class="btn" >Add to cart</a>
+                </div>
+
+                <div class="box">
+                    <img src="./assets/images/img7.jpg" alt="">
+                    <span class="price">Rs.350-Rs.500</span>
+                    <h3>Lilly</h3>
+                    <div class="stars">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="far fa-star"></i>
+                    </div>
+                    <a href="#" class="btn" >Add to cart</a>
+                </div>
+
+                <div class="box">
+                    <img src="./assets/images/img8.jpg" alt="">
+                    <span class="price">Rs.350-Rs.500</span>
+                    <h3>Jasmine</h3>
+                    <div class="stars">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="far fa-star"></i>
+                    </div>
+                    <a href="#" class="btn" >Add to cart</a>
+                </div>
+
+                <div class="box">
+                    <img src="./assets/images/img9.jpg" alt="">
+                    <span class="price">Rs.350-Rs.500</span>
+                    <h3>Geranium</h3>
+                    <div class="stars">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="far fa-star"></i>
+                    </div>
+                    <a href="#" class="btn" >Add to cart</a>
+                </div>
+
+                <div class="box">
+                    <img src="./assets/images/img10.jpg" alt="">
+                    <span class="price">Rs.350-Rs.500</span>
+                    <h3>Wedding flower</h3>
+                    <div class="stars">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="far fa-star"></i>
+                    </div>
+                    <a href="#" class="btn" >Add to cart</a>
+                </div>
+
+
+
+
+
+        </div>
+        </section>-->
+
+
+</body>
+</html>

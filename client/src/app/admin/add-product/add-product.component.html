@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+</head>
+<body>
+  <app-header></app-header>
+<div class="d-flex">
+  
+    <app-sidebar></app-sidebar>
+  
+  <form #clientform="ngForm" (ngSubmit)="submitForm(clientform)" >
+    <label for="name">Product Name:</label>
+    <input type="text" [(ngModel)]="product.pname" id="name" placeholder="Enter name of the product" name="pname" required>
+    <br>
+    <label for="price">Price:</label>
+    <input type="number"  [(ngModel)]="product.price" id="price" placeholder="Enter price" name="price" required>
+    <br>
+    <label for="description">Image:</label>
+    <input type="text" id="text"  [(ngModel)]="product.image" placeholder="Enter image url" name="image" required>
+    <br>
+    <input type="submit" value="Add Product">
+  </form>
+  </div>
+</body>
+</html>
+

@@ -1,0 +1,15 @@
+.home .image{
+    flex: 1 1 30rem;
+}
+
+.home .image img{
+    display: block;
+      max-width: 75%;
+      height: auto;
+      margin: 0 auto;
+}
+section {
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 20px;
+  }

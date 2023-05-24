@@ -1,0 +1,28 @@
+<form #clientform="ngForm" (ngSubmit)="submitForm(clientform)" >  
+    <div class="container">   
+    <label> Firstname </label>   
+  <input type="text" [(ngModel)]="user.firstname" name="firstname" placeholder= "Firstname" size="15" required />     
+  <label> Lastname: </label>    
+  <input type="text" [(ngModel)]="user.lastname" name="lastname" placeholder="Lastname" size="15"required />   
+  <label>   
+  Phone :  
+  </label>  
+  <input type="text" [(ngModel)]="user.phone" name="phone" placeholder="phone number"  value="+91" size="2"/>     
+  Current Address :  
+  <textarea cols="80" [(ngModel)]="user.address" name="address" rows="5" placeholder="Current Address" value="address" required>  
+  </textarea>  
+   <label for="email"><b>Email</b></label>  
+   <input type="text" [(ngModel)]="user.email" placeholder="Enter Email" name="email" required>  
+    
+      <label for="psw"><b>Password</b></label>  
+      <input type="password" [(ngModel)]="user.password" placeholder="Enter Password" name="psw" required>  
+    
+      <label for="psw-repeat"><b>Re-type Password</b></label>  
+      <input type="password" [(ngModel)]="user.repass"  placeholder="Retype Password" name="psw-repeat" required>  
+      <button type="submit" class="registerbtn">Register</button>
+      <button type="submit" class="cancelbtn">Cancel</button>
+
+      <p>By creating an account you agree to our <a href="#"
+        style="color:dodgerblue">Terms & Privacy</a>.</p>
+</div>
+</form>
